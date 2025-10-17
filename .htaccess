@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# Redirect ?id=1 → /id/1
+RewriteCond %{QUERY_STRING} ^id=([0-9]+)$
+RewriteRule ^id$ id/%1? [R=301,L]
+
+# Internally rewrite /user/1 → user.php?id=1
+RewriteRule ^user/([0-9]+)$ user.php?id=$1 [L,QSA]
+
+# Internally rewrite /recipe/recipename → recipe.php?data=recipename
+RewriteRule ^recipe/(.+)$ recipe.php?data=$1 [L,QSA]
+
+# Optional: fallback for .php files
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]

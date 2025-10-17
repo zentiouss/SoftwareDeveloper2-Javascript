@@ -1,0 +1,63 @@
+:root{
+    --text-clr: #a2a2a2;
+}
+
+* {
+    font-family: sans-serif;
+}
+
+a,h1,h2,h3,h4,h5,h6,p,button,input,textarea {
+    color: var(--text-clr);
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 10px;
+}
+
+input {
+    width: 300px;
+    height: 30px;
+    font-size: 16px;
+    padding: 5px;
+    border: 2px solid #CCC;
+    border-radius: 5px;
+    transition: 1s ease all;
+    text-align: center;
+}
+
+button.search {
+    width: 100px;
+    height: 42px;
+    font-size: 16px;
+    background-color: #28A745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.search:hover {
+    background-color: #218838;
+}
+
+
+input:focus {
+    outline: none;
+    /* border-color: #28A745; */
+    transition: 1s ease all;
+}
+
+.top p {
+    font-size: large;
+    cursor: default;
+}

@@ -1,0 +1,54 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 10px;
+}
+
+.container {
+    background-color: #28A745;
+    border-radius: 15px;
+    height: 50%;
+    width: 30%;
+    border: red dashed 1px;
+}
+
+form {
+    display: flex;
+    margin: 15px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+h1 {
+    margin-left: 15px;
+    color: #fff;
+}
+
+p.text {
+    font-size: small;
+    color: #fff;
+    font-weight: bold;
+}
+
+.submit {
+    height: 25px;
+    width: 75px;
+}
+
+a {
+    margin-left: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: small;
+    font-weight: bold;
+}
